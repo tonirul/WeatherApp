@@ -32,11 +32,11 @@ Set the key as an environment variable:
 
 Linux / macOS
 bash
-Copy code
+ 
 export OPENWEATHER_API_KEY="your_api_key_here"
 Windows (PowerShell)
 powershell
-Copy code
+ 
 setx OPENWEATHER_API_KEY "your_api_key_here"
 ⚠️ Restart your terminal/IDE after setting the variable.
 
@@ -44,14 +44,14 @@ setx OPENWEATHER_API_KEY "your_api_key_here"
 Start the Flask server:
 
 bash
-Copy code
+ 
 python app.py
 Open the app in your browser:
 👉 http://127.0.0.1:5000
 
 📂 Project Structure
 bash
-Copy code
+ 
 weather-app/
 │── app.py              # Flask backend
 │── requirements.txt    # Python dependencies
