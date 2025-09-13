@@ -1,106 +1,102 @@
-🌦️ Weather App (Flask + OpenWeather API)
+# 🌦️ Flask Weather App
 
-A simple and beginner-friendly web application built with Flask that shows current weather and a 7-day forecast for any city.
-It also includes location-based weather detection using your device’s GPS and smart city name suggestions while typing.
+A simple **Weather Forecast Web Application** built with **Python (Flask)** and the **OpenWeather API**.  
+This app allows users to search for weather by **city name**, use **autocomplete suggestions**, or fetch weather by **current location (GPS)**.  
+It also shows the **7-day forecast** with min/max temperatures, weather icons, and descriptions.
 
-✨ Features
+---
 
-🌍 Search weather by city name.
+## 🚀 Features
+- ✅ Search weather by **city name**  
+- ✅ **Autocomplete city suggestions** while typing  
+- ✅ Fetch weather by **current location (GPS)**  
+- ✅ Current weather info:  
+  - 🌡️ Temperature  
+  - 🌍 City & Country  
+  - ⛅ Weather condition & description  
+  - 💨 Wind speed  
+- ✅ **7-Day Forecast** with min/max temperature, weather icon & description  
+- ✅ Clean, responsive UI with simple design  
 
-📍 Detect weather automatically using your current location (GPS).
+---
 
-🔮 Get a 7-day forecast (min/max temperature, weather description, and icons).
+## 🛠️ Requirements
+Make sure you have the following installed:
+- [Python 3.8+](https://www.python.org/downloads/)  
+- [pip](https://pip.pypa.io/en/stable/) (Python package installer)  
 
-📝 City suggestions dropdown while typing.
+---
 
-🎨 Clean and responsive UI with background gradients.
+## 📦 Installation & Setup
 
-🛠️ Requirements
-
-Python 3.8+
-
-An OpenWeatherMap API Key (free to generate at openweathermap.org
-)
-
-📦 Installation & Setup
-1. Clone or Download the Project
-git clone https://github.com/your-username/weather-app.git
-cd weather-app
-
-2. Create a Virtual Environment (recommended)
+### 1️⃣ Clone the project
+```bash
+git clone https://github.com/yourusername/flask-weather-app.git
+cd flask-weather-app
+2️⃣ Create a virtual environment (recommended)
+bash
+Copy code
 python -m venv venv
-
-
 Activate it:
 
-Windows (cmd):
+On Windows:
 
+bash
+Copy code
 venv\Scripts\activate
+On macOS/Linux:
 
-
-Linux / macOS:
-
+bash
+Copy code
 source venv/bin/activate
-
-3. Install Dependencies
+3️⃣ Install dependencies
+bash
+Copy code
 pip install -r requirements.txt
+4️⃣ Get an OpenWeather API Key
+Go to OpenWeatherMap
 
+Sign up (free) and get your API key
 
-If you don’t have requirements.txt, create it with:
+Replace the API key in app.py:
 
-Flask>=2.0
-requests
-
-4. Add Your API Key
-
-Open app.py and replace the placeholder with your own API key:
-
+python
+Copy code
 API_KEY = "your_api_key_here"
-
-
-You can get a free API key from 👉 OpenWeatherMap
-.
-
-5. Run the App
+5️⃣ Run the Flask app
+bash
+Copy code
 python app.py
+By default, the app runs on http://127.0.0.1:5000/
 
-6. Open in Browser
+🌐 Usage
+Open your browser and go to:
+👉 http://127.0.0.1:5000/
 
-Go to 👉 http://127.0.0.1:5000
+Type a city name (e.g., London, New York, Mumbai)
 
-📂 Project Structure
-weather-app/
-│── app.py               # Flask backend logic
-│── requirements.txt     # Dependencies
+Select from suggestions or press search
+
+Or click the 📍 GPS button to get weather for your current location
+
+View current weather and 7-day forecast
+
+📁 Project Structure
+bash
+Copy code
+flask-weather-app/
+│── app.py              # Main Flask backend
+│── requirements.txt    # Dependencies
 │── templates/
-│    └── index.html      # Frontend UI
+│    └── index.html     # Frontend (HTML + JS + CSS)
+│── README.md           # Documentation
+📷 Screenshot
+(You can add your own screenshot here later)
 
-🚀 Usage
+🙌 Credits
+Flask - Python Web Framework
 
-Type a city name (e.g., "London") → hit search.
+OpenWeather API - Weather Data Provider
 
-Use the GPS button to auto-detect weather for your location.
-
-View 7-day forecast cards with daily temperatures & descriptions.
-
-Try typing slowly → you’ll see city suggestions dropdown.
-
-🖼️ Demo Screenshots
-
-🌤️ Weather card showing temperature, wind, and description.
-
-📊 Forecast section with 7 days of weather info.
-
-(You can add screenshots here by uploading PNG/JPG files to your repo and linking them.)
-
-⚠️ Notes
-
-Free OpenWeatherMap API keys have rate limits (60 requests/min).
-
-If you see "Failed to fetch weather", double-check your API key.
-
-Works best with stable internet and when location permissions are granted.
-
-👨‍💻 Author
-
-Made with ❤️ using Flask and OpenWeather API.
+📜 License
+This project is open-source and free to use for learning purposes.
