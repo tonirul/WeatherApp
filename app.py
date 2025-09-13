@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, jsonify
 import requests
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 
-API_KEY = "b48d512235d695068e4c0eb340e256c7"
+# Load API key from environment variable
+API_KEY = os.getenv("OPENWEATHER_API_KEY")
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 GEO_URL = "http://api.openweathermap.org/geo/1.0/direct"
 FORECAST_URL = "https://api.openweathermap.org/data/2.5/forecast"
@@ -114,4 +116,6 @@ def weather_by_coords():
 
 
 if __name__ == "__main__":
+    if not API_KEY:
+        raise ValueError("❌ Missing OPENWEATHER_API_KEY. Please set it as an environment variable.")
     app.run(debug=True)
